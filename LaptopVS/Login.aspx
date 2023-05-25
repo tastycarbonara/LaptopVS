@@ -16,7 +16,7 @@
             <asp:Label ID="Label2" runat="server" Text="Password:"></asp:Label>
             <asp:TextBox ID="pw" runat="server"></asp:TextBox><br />
 
-            <asp:Button ID="Button1" runat="server" Text="Login" />
+            <asp:Button ID="LoginButton" runat="server" Text="Login" />
         </div>
     </form>
 </body>
