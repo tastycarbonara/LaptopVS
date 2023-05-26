@@ -51,6 +51,15 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.DropDownList LeftLaptopSelection;
 
         /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+
+        /// <summary>
         /// cpu control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace LaptopVS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label cpu;
+
+        /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
         /// cpuperf control.
@@ -69,6 +87,24 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.Label cpuperf;
 
         /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+
+        /// <summary>
+        /// Label4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label4;
+
+        /// <summary>
         /// gpu control.
         /// </summary>
         /// <remarks>
@@ -78,6 +114,15 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.Label gpu;
 
         /// <summary>
+        /// Label5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label5;
+
+        /// <summary>
         /// gpuperf control.
         /// </summary>
         /// <remarks>
@@ -85,6 +130,15 @@ namespace LaptopVS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label gpuperf;
+
+        /// <summary>
+        /// Label6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
         /// ram control.
@@ -105,6 +159,15 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.Label ramsize;
 
         /// <summary>
+        /// Label7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
+
+        /// <summary>
         /// storage control.
         /// </summary>
         /// <remarks>
@@ -121,6 +184,15 @@ namespace LaptopVS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label storagesize;
+
+        /// <summary>
+        /// Label8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label8;
 
         /// <summary>
         /// temp control.
@@ -141,6 +213,15 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.Label tempcels;
 
         /// <summary>
+        /// Label9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label9;
+
+        /// <summary>
         /// price control.
         /// </summary>
         /// <remarks>
@@ -150,13 +231,13 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.Label price;
 
         /// <summary>
-        /// pricerp control.
+        /// priceusd control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label pricerp;
+        protected global::System.Web.UI.WebControls.Label priceusd;
 
         /// <summary>
         /// sound control.
@@ -175,6 +256,15 @@ namespace LaptopVS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label sounddb;
+
+        /// <summary>
+        /// Label10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label10;
 
         /// <summary>
         /// screen control.
@@ -240,6 +330,15 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.DropDownList LaptopRightSelection;
 
         /// <summary>
+        /// Label11 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label11;
+
+        /// <summary>
         /// cpu2 control.
         /// </summary>
         /// <remarks>
@@ -247,6 +346,15 @@ namespace LaptopVS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label cpu2;
+
+        /// <summary>
+        /// Label12 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label12;
 
         /// <summary>
         /// cpuperf2 control.
@@ -258,6 +366,24 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.Label cpuperf2;
 
         /// <summary>
+        /// Label13 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label13;
+
+        /// <summary>
+        /// Label16 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label16;
+
+        /// <summary>
         /// gpu2 control.
         /// </summary>
         /// <remarks>
@@ -267,6 +393,15 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.Label gpu2;
 
         /// <summary>
+        /// Label15 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label15;
+
+        /// <summary>
         /// gpuperf2 control.
         /// </summary>
         /// <remarks>
@@ -274,6 +409,15 @@ namespace LaptopVS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label gpuperf2;
+
+        /// <summary>
+        /// Label14 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label14;
 
         /// <summary>
         /// ram2 control.
@@ -294,6 +438,15 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.Label ramsize2;
 
         /// <summary>
+        /// Label17 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label17;
+
+        /// <summary>
         /// storage2 control.
         /// </summary>
         /// <remarks>
@@ -310,6 +463,15 @@ namespace LaptopVS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label storagesize2;
+
+        /// <summary>
+        /// Label18 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label18;
 
         /// <summary>
         /// temp2 control.
@@ -330,6 +492,15 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.Label tempcels2;
 
         /// <summary>
+        /// Label19 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label19;
+
+        /// <summary>
         /// price2 control.
         /// </summary>
         /// <remarks>
@@ -339,13 +510,13 @@ namespace LaptopVS
         protected global::System.Web.UI.WebControls.Label price2;
 
         /// <summary>
-        /// pricerp2 control.
+        /// priceusd2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label pricerp2;
+        protected global::System.Web.UI.WebControls.Label priceusd2;
 
         /// <summary>
         /// sound2 control.
@@ -364,6 +535,15 @@ namespace LaptopVS
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label sounddb2;
+
+        /// <summary>
+        /// Label20 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label20;
 
         /// <summary>
         /// screen2 control.

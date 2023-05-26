@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaptopVS.Laptop;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,14 @@ namespace LaptopVS
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void addnewlaptop_Click(object sender, EventArgs e)
+        {
+            LaptopController.addlaptop(laptopname.Text, cpuname.Text, cpuperf.Text, gpuname.Text, 
+                gpuperf.Text, ramsize.Text, storagesize.Text, avgtemp.Text, pricetag.Text, noise.Text,
+                screenres.Text, linktotokped.Text);
+            Response.Redirect("Main.aspx");
         }
     }
 }

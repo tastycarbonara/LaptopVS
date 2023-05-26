@@ -13,6 +13,9 @@
         background-color: white; border-radius: 5%; padding: 1%; border: 1px solid #b5b5b5 ; padding-bottom: 45px;">
             <h1>Add New Laptop</h1>
 
+            <asp:Label ID="Label12" runat="server" Text="Laptop Name:" style="display: inline-block; font-size: 20px; width: 200px;"></asp:Label>
+            <asp:TextBox ID="laptopname" runat="server"></asp:TextBox><br />
+
             <asp:Label ID="Label1" runat="server" Text="CPU Name:" style="display: inline-block; font-size: 20px; width: 200px;"></asp:Label>
             <asp:TextBox ID="cpuname" runat="server"></asp:TextBox><br />
 
@@ -48,7 +51,7 @@
 
             <asp:Button ID="addnewlaptop" runat="server" Text="Add New Laptop" style="font-size: 16px; 
                 padding-left: 20px; padding-right: 20px; position: absolute; left: 50%;
-                transform: translate(-50%, -50%);"/>
+                transform: translate(-50%, -50%);" OnClick="addnewlaptop_Click"/>
 
         </div>
     </form>

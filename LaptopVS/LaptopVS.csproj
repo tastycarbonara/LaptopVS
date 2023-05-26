@@ -106,6 +106,9 @@
     <Compile Include="laptop.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Laptop\LaptopController.cs" />
+    <Compile Include="Laptop\LaptopFactory.cs" />
+    <Compile Include="Laptop\LaptopRepository.cs" />
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -18,73 +18,101 @@
         
         <div style="margin-top: 5%;">
            
-            <div style="float: left;">
-                <asp:Image ID="Image1" runat="server" ImageUrl=" "/><br />
-                <asp:DropDownList ID="LeftLaptopSelection" runat="server">
+            <div style="float: left; padding-left: 3%; font-size: 20px;">
+                <asp:Image ID="Image1" runat="server" ImageUrl=" " width="400px" Height="300px"/><br />
+                <asp:DropDownList ID="LeftLaptopSelection" runat="server" style="width: 300px; height: 50px; font-size: 25px;">
                 </asp:DropDownList><br />
 
-                <asp:Label ID="cpu" runat="server" Text=""></asp:Label>
-                <asp:Label ID="cpuperf" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="Label1" runat="server" Text="CPU Name:"></asp:Label>
+                <asp:Label ID="cpu" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
 
-                <asp:Label ID="gpu" runat="server" Text=""></asp:Label>
-                <asp:Label ID="gpuperf" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="Label2" runat="server" Text="CPU Performance: "></asp:Label>
+                <asp:Label ID="cpuperf" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label3" runat="server" Text="% of 100%"></asp:Label>
+                <br />
 
-                <asp:Label ID="ram" runat="server" Text=""></asp:Label>
-                <asp:Label ID="ramsize" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="Label4" runat="server" Text="CPU Name:"></asp:Label>
+                <asp:Label ID="gpu" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
 
-                <asp:Label ID="storage" runat="server" Text=""></asp:Label>
-                <asp:Label ID="storagesize" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="Label5" runat="server" Text="GPU Performance: "></asp:Label>
+                <asp:Label ID="gpuperf" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label6" runat="server" Text="% of 100%"></asp:Label><br />
 
-                <asp:Label ID="temp" runat="server" Text=""></asp:Label>
-                <asp:Label ID="tempcels" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="ram" runat="server" Text="RAM size: "></asp:Label>
+                <asp:Label ID="ramsize" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label7" runat="server" Text="GB"></asp:Label><br />
 
-                <asp:Label ID="price" runat="server" Text=""></asp:Label>
-                <asp:Label ID="pricerp" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="storage" runat="server" Text="Storage size:"></asp:Label>
+                <asp:Label ID="storagesize" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label8" runat="server" Text="GB"></asp:Label><br />
 
-                <asp:Label ID="sound" runat="server" Text=""></asp:Label>
-                <asp:Label ID="sounddb" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="temp" runat="server" Text="Average Temperature: "></asp:Label>
+                <asp:Label ID="tempcels" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label9" runat="server" Text="Celsius"></asp:Label><br />
 
-                <asp:Label ID="screen" runat="server" Text=""></asp:Label>
-                <asp:Label ID="screenres" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="price" runat="server" Text="Price: USD "></asp:Label>
+                <asp:Label ID="priceusd" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
 
-                <asp:Label ID="afflink" runat="server" Text=""></asp:Label>
-                <asp:Label ID="afflinktokped" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="sound" runat="server" Text="Fan Noise: "></asp:Label>
+                <asp:Label ID="sounddb" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label10" runat="server" Text="dB"></asp:Label><br />
+
+                <asp:Label ID="screen" runat="server" Text="Screen Resolution: "></asp:Label>
+                <asp:Label ID="screenres" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
+
+                <asp:Label ID="afflink" runat="server" Text="Shop Link: "></asp:Label>
+                <asp:Label ID="afflinktokped" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
             </div>
             
             <asp:Button ID="compbutton" runat="server" Text="COMPARE" style="font-size: 40px; 
                 padding: 20px; position: absolute; left: 50%; margin-top:50px; border-radius: 5px;
-                transform: translate(-50%, -50%); background-color: #555555; color: white;"/>
+                transform: translate(-50%, -50%); background-color: #555555; color: white;" 
+                OnClick="compbutton_Click"/>
 
-            <div style="float: right;">
-                <asp:Image ID="Image2" runat="server" ImageUrl=" "/><br />
-                <asp:DropDownList ID="LaptopRightSelection" runat="server"></asp:DropDownList><br />
+            <div style="float: right;padding-right:3%;font-size: 20px;">
+                <asp:Image ID="Image2" runat="server" ImageUrl=" " width="400px" Height="300px"/><br />
+                <asp:DropDownList ID="LaptopRightSelection" runat="server" style="width: 300px; height: 50px; font-size: 25px;">
+                </asp:DropDownList><br />
 
-                <asp:Label ID="cpu2" runat="server" Text=""></asp:Label>
-                <asp:Label ID="cpuperf2" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="Label11" runat="server" Text="CPU Name:"></asp:Label>
+                <asp:Label ID="cpu2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
 
-                <asp:Label ID="gpu2" runat="server" Text=""></asp:Label>
-                <asp:Label ID="gpuperf2" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="Label12" runat="server" Text="CPU Performance: "></asp:Label>
+                <asp:Label ID="cpuperf2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label13" runat="server" Text="% of 100%"></asp:Label><br />
 
-                <asp:Label ID="ram2" runat="server" Text=""></asp:Label>
-                <asp:Label ID="ramsize2" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="Label16" runat="server" Text="GPU Name:"></asp:Label>
+                <asp:Label ID="gpu2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
 
-                <asp:Label ID="storage2" runat="server" Text=""></asp:Label>
-                <asp:Label ID="storagesize2" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="Label15" runat="server" Text="GPU Performance: "></asp:Label>
+                <asp:Label ID="gpuperf2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label14" runat="server" Text="% of 100%">
+                </asp:Label><br />
 
-                <asp:Label ID="temp2" runat="server" Text=""></asp:Label>
-                <asp:Label ID="tempcels2" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="ram2" runat="server" Text="RAM Size: "></asp:Label>
+                <asp:Label ID="ramsize2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label17" runat="server" Text="GB"></asp:Label><br />
 
-                <asp:Label ID="price2" runat="server" Text=""></asp:Label>
-                <asp:Label ID="pricerp2" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="storage2" runat="server" Text="Storage Size: "></asp:Label>
+                <asp:Label ID="storagesize2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label18" runat="server" Text="GB"></asp:Label><br />
 
-                <asp:Label ID="sound2" runat="server" Text=""></asp:Label>
-                <asp:Label ID="sounddb2" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="temp2" runat="server" Text="Average Temperature: "></asp:Label>
+                <asp:Label ID="tempcels2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label19" runat="server" Text="Celsius"></asp:Label><br />
 
-                <asp:Label ID="screen2" runat="server" Text=""></asp:Label>
-                <asp:Label ID="screenres2" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="price2" runat="server" Text="Price: USD "></asp:Label>
+                <asp:Label ID="priceusd2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
 
-                <asp:Label ID="afflink2" runat="server" Text=""></asp:Label>
-                <asp:Label ID="afflinktokped2" runat="server" Text=""></asp:Label><br />
+                <asp:Label ID="sound2" runat="server" Text="Fan Noise: "></asp:Label>
+                <asp:Label ID="sounddb2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label20" runat="server" Text="dB"></asp:Label><br />
+
+                <asp:Label ID="screen2" runat="server" Text="Screen Resolution: "></asp:Label>
+                <asp:Label ID="screenres2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
+
+                <asp:Label ID="afflink2" runat="server" Text="Shop Link: "></asp:Label>
+                <asp:Label ID="afflinktokped2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
             </div>
         </div>
     </form>
