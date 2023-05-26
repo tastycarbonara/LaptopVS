@@ -6,13 +6,17 @@
 <head runat="server">
     <title>LaptopVS</title>
 </head>
-<body style="font-family:Corbel;"">
+<body style="font-family:Corbel;">
     <form id="form1" runat="server">
         <div style="margin: auto; width: 50%; text-align: center;">
             <h1 style="font-size: 50px; font-weight: bold;">LaptopVS</h1>
         </div>
-
-        <div>
+        <div style="display: -webkit-box; margin-right: auto; margin-top:-100px;">
+            <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/person-4.png" OnClick="ImageButton1_Click" 
+                width="50px" Height="50px"  />
+        </div>
+        
+        <div style="margin-top: 5%;">
            
             <div style="float: left;">
                 <asp:Image ID="Image1" runat="server" ImageUrl=" "/><br />

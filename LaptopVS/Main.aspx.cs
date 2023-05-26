@@ -13,5 +13,10 @@ namespace LaptopVS
         {
 
         }
+
+        protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }
