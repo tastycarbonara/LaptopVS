@@ -47,9 +47,9 @@
                 <asp:Label ID="afflinktokped" runat="server" Text=""></asp:Label><br />
             </div>
             
-            <asp:Button ID="compbutton" runat="server" Text="Compare" style="font-size: 16px; 
-                padding-left: 20px; padding-right: 20px; position: absolute; left: 50%;
-                transform: translate(-50%, -50%);"/>
+            <asp:Button ID="compbutton" runat="server" Text="COMPARE" style="font-size: 40px; 
+                padding: 20px; position: absolute; left: 50%; margin-top:50px; border-radius: 5px;
+                transform: translate(-50%, -50%); background-color: #555555; color: white;"/>
 
             <div style="float: right;">
                 <asp:Image ID="Image2" runat="server" ImageUrl=" "/><br />
