@@ -6,14 +6,18 @@
 <head runat="server">
     <title>LaptopVS</title>
 </head>
-<body>
+<body style="font-family:Corbel;"">
     <form id="form1" runat="server">
+        <div style="margin: auto; width: 50%; text-align: center;">
+            <h1 style="font-size: 50px; font-weight: bold;">LaptopVS</h1>
+        </div>
+
         <div>
-            <h1 style="align-content: center;">LaptopVS</h1>
-            
+           
             <div style="float: left;">
                 <asp:Image ID="Image1" runat="server" ImageUrl=" "/><br />
-                <asp:DropDownList ID="LeftLaptopSelection" runat="server"></asp:DropDownList><br />
+                <asp:DropDownList ID="LeftLaptopSelection" runat="server">
+                </asp:DropDownList><br />
 
                 <asp:Label ID="cpu" runat="server" Text=""></asp:Label>
                 <asp:Label ID="cpuperf" runat="server" Text=""></asp:Label><br />
@@ -43,7 +47,9 @@
                 <asp:Label ID="afflinktokped" runat="server" Text=""></asp:Label><br />
             </div>
             
-            <asp:Button ID="compbutton" runat="server" Text="Compare" />
+            <asp:Button ID="compbutton" runat="server" Text="Compare" style="font-size: 16px; 
+                padding-left: 20px; padding-right: 20px; position: absolute; left: 50%;
+                transform: translate(-50%, -50%);"/>
 
             <div style="float: right;">
                 <asp:Image ID="Image2" runat="server" ImageUrl=" "/><br />
