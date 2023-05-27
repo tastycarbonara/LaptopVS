@@ -33,6 +33,52 @@ namespace LaptopVS
                 LaptopRightSelection.DataBind();
 
             }
+
+            HttpCookie cookie = Request.Cookies["ingfo"];
+            if (cookie == null)
+            {
+                LOGOUT.Visible = false;
+            }
+
+            Image1.Visible = false;
+            Image2.Visible = false;
+
+            Label1.Visible = false;
+            Label2.Visible = false;
+            Label3.Visible = false;
+            Label4.Visible = false;
+            Label5.Visible = false;
+            Label6.Visible = false;
+            Label7.Visible = false;
+            ram.Visible = false;
+            price.Visible = false;
+            storage.Visible = false;
+            Label8.Visible = false;
+            Label9.Visible = false;
+            temp.Visible = false;
+            sound.Visible = false;
+            Label10.Visible = false;
+            screen.Visible = false;
+            afflink.Visible = false;
+
+            Label11.Visible = false;
+            Label12.Visible = false;
+            Label13.Visible = false;
+            Label14.Visible = false;
+            Label15.Visible = false;
+            Label16.Visible = false;
+            Label17.Visible = false;
+            ram2.Visible = false;
+            price2.Visible = false;
+            storage2.Visible = false;
+            Label18.Visible = false;
+            Label19.Visible = false;
+            temp2.Visible = false;
+            sound2.Visible = false;
+            Label20.Visible = false;
+            screen2.Visible = false;
+            afflink2.Visible = false;
+
         }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
@@ -77,6 +123,45 @@ namespace LaptopVS
             afflinktokped2.Text = dr2["afflink"].ToString();
             con.Close();
 
+            Image1.Visible = true;
+            Image2.Visible = true;
+
+            Label1.Visible = true;
+            Label2.Visible = true;
+            Label3.Visible = true;
+            Label4.Visible = true;
+            Label5.Visible = true;
+            Label6.Visible = true;
+            Label7.Visible = true;
+            ram.Visible = true;
+            price.Visible = true;
+            storage.Visible = true;
+            Label8.Visible = true;
+            Label9.Visible = true;
+            temp.Visible = true;
+            sound.Visible = true;
+            Label10.Visible = true;
+            screen.Visible = true;
+            afflink.Visible = true;
+
+            Label11.Visible = true;
+            Label12.Visible = true;
+            Label13.Visible = true;
+            Label14.Visible = true;
+            Label15.Visible = true;
+            Label16.Visible = true;
+            Label17.Visible = true;
+            ram2.Visible = true;
+            price2.Visible = true;
+            storage2.Visible = true;
+            Label18.Visible = true;
+            Label19.Visible = true;
+            temp2.Visible = true;
+            sound2.Visible = true;
+            Label20.Visible = true;
+            screen2.Visible = true;
+            afflink2.Visible = true;
+
             if (LeftLaptopSelection.SelectedValue == "2")
             {
                 Image1.ImageUrl = "~/spectre.jpg";
@@ -118,6 +203,29 @@ namespace LaptopVS
             {
                 Image2.ImageUrl = "~/swift.jpg";
             }
+        }
+
+        protected void LOGOUT_Click(object sender, ImageClickEventArgs e)
+        {
+            HttpCookie cookie = Request.Cookies["ingfo"];
+
+            cookie.Expires = DateTime.Now.AddDays(-1);
+
+            Response.Cookies.Add(cookie);
+            Response.Redirect("Main.aspx");
+        }
+
+        protected void AddNewLaptop_Click(object sender, EventArgs e)
+        {
+            HttpCookie cookie = Request.Cookies["ingfo"];
+            if (cookie != null)
+            {
+                if (cookie["role"] == "Admin")
+                {
+                    Response.Redirect("AddNewLaptop.aspx");
+                }
+            }
+            Response.Redirect("Main.aspx");
         }
     }
 }

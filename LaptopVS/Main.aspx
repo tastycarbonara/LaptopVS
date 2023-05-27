@@ -8,15 +8,18 @@
 </head>
 <body style="font-family:Corbel;">
     <form id="form1" runat="server">
-        <div style="margin: auto; width: 50%; text-align: center;">
-            <h1 style="font-size: 50px; font-weight: bold;">LaptopVS</h1>
-        </div>
-        <div style="display: -webkit-box; margin-right: auto; margin-top:-100px;">
-            <asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/person-4.png" OnClick="ImageButton1_Click" 
+        <div style="text-align: center; display: flex; position: sticky; height: 70px;  ">
+            <p style="font-size: 50px; font-weight: bold; font-size: 50px;
+                margin-top: -8px; margin-left: 42%; margin-right: auto;">LaptopVS</p>
+            <asp:Button ID="AddNewLaptop" runat="server" Text="Add New Laptop" 
+                OnClick="AddNewLaptop_Click" width="130px" Height="50px"/>
+            <asp:ImageButton ID="LOGOUT" runat="server" ImageUrl="~/logout.png" OnClick="LOGOUT_Click"
+                width="50px" Height="50px"/>
+            <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/person-4.png" OnClick="ImageButton1_Click" 
                 width="50px" Height="50px"  />
         </div>
         
-        <div style="margin-top: 5%;">
+        <div style="margin-top: 5%; font-family: Bahnschrift;">
            
             <div style="float: left; padding-left: 3%; font-size: 20px;">
                 <asp:Image ID="Image1" runat="server" ImageUrl=" " width="400px" Height="300px"/><br />

@@ -24,7 +24,7 @@
 
             <asp:Button ID="RegisterButton" runat="server" Text="Register" style="font-size: 16px; 
                 padding-left: 20px; padding-right: 20px; position: absolute; left: 50%;
-                transform: translate(-50%, -50%);"/>
+                transform: translate(-50%, -50%);" OnClick="RegisterButton_Click"/>
         </div>
     </form>
 </body>

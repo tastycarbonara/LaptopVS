@@ -19,7 +19,7 @@
 
             <asp:Button ID="LoginButton" runat="server" Text="Login" style="font-size: 16px; 
                 padding-left: 20px; padding-right: 20px; position: absolute; left: 50%;
-                transform: translate(-50%, -50%);"/><br /><br />
+                transform: translate(-50%, -50%);" OnClick="LoginButton_Click"/><br /><br />
 
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Register.aspx">Don't have an account? Register here.</asp:HyperLink>
 

@@ -13,5 +13,31 @@ namespace LaptopVS
         {
 
         }
+
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
+            laptopsEntities db = new laptopsEntities();
+
+            User user = (from u in db.Users where u.username.Equals(usern.Text) && u.password.Equals(pw.Text) select u).FirstOrDefault(); //FirstOrDefault = untuk memilih hasil pencarian pertama
+
+            if (user == null)
+            {
+                Response.Redirect("login.aspx");
+                return;
+            }
+
+            HttpCookie cookie = new HttpCookie("ingfo");
+
+            cookie["user"] = user.username;
+            cookie["role"] = user.role;
+
+            Session["user_pass"] = user.password;
+
+            cookie.Expires = DateTime.Now.AddDays(1);
+
+            Response.Cookies.Add(cookie);
+
+            Response.Redirect("Main.aspx");
+        }
     }
 }
