@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LaptopVS
+namespace LaptopVS.Model
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class laptopsEntities : DbContext
+    public partial class laptopsEntities3 : DbContext
     {
-        public laptopsEntities()
-            : base("name=laptopsEntities")
+        public laptopsEntities3()
+            : base("name=laptopsEntities3")
         {
         }
     
@@ -25,6 +25,7 @@ namespace LaptopVS
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Comment> Comments { get; set; }
         public virtual DbSet<laptop> laptops { get; set; }
         public virtual DbSet<User> Users { get; set; }
     }

@@ -20,7 +20,6 @@
         </div>
         
         <div style="margin-top: 5%; font-family: Bahnschrift;">
-           
             <div style="float: left; padding-left: 3%; font-size: 20px;">
                 <asp:Image ID="Image1" runat="server" ImageUrl=" " width="400px" Height="300px"/><br />
                 <asp:DropDownList ID="LeftLaptopSelection" runat="server" style="width: 300px; height: 50px; font-size: 25px;">
@@ -65,6 +64,12 @@
 
                 <asp:Label ID="afflink" runat="server" Text="Shop Link: "></asp:Label>
                 <asp:Label ID="afflinktokped" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
+                <br />
+                <h2>Comments</h2>
+                <asp:GridView ID="Comment1" runat="server"  BorderStyle="None" ></asp:GridView>
+                <asp:TextBox ID="CommentBox1" runat="server"></asp:TextBox><br />
+                <asp:Button ID="SendComment1" runat="server" Text="Comment" OnClick="SendComment1_Click" />
+
             </div>
             
             <asp:Button ID="compbutton" runat="server" Text="COMPARE" style="font-size: 40px; 
@@ -116,6 +121,11 @@
 
                 <asp:Label ID="afflink2" runat="server" Text="Shop Link: "></asp:Label>
                 <asp:Label ID="afflinktokped2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
+                 <br />
+                <h2>Comments</h2>
+                <asp:GridView ID="Comment2" runat="server"  BorderStyle="None" ></asp:GridView>
+                <asp:TextBox ID="CommentBox2" runat="server"></asp:TextBox><br />
+                <asp:Button ID="SendComment2" runat="server" Text="Comment" OnClick="SendComment2_Click" />
             </div>
         </div>
     </form>

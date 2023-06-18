@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LaptopVS
+namespace LaptopVS.Model
 {
     using System;
     using System.Collections.Generic;

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using LaptopVS.Model;
 
 namespace LaptopVS
 {
@@ -16,7 +17,7 @@ namespace LaptopVS
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            laptopsEntities db = new laptopsEntities();
+            laptopsEntities3 db = new laptopsEntities3();
 
             User user = (from u in db.Users where u.username.Equals(usern.Text) && u.password.Equals(pw.Text) select u).FirstOrDefault(); //FirstOrDefault = untuk memilih hasil pencarian pertama
 

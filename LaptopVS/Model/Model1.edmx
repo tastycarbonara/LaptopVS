@@ -5,6 +5,15 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
       <Schema Namespace="laptopsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Comment" Type="varchar(max)" Nullable="false" />
+          <Property Name="LaptopId" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="laptop">
           <Key>
             <PropertyRef Name="Id" />
@@ -33,6 +42,7 @@
           <Property Name="role" Type="varchar" MaxLength="50" />
         </EntityType>
         <EntityContainer Name="laptopsModelStoreContainer">
+          <EntitySet Name="Comment" EntityType="Self.Comment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="laptop" EntityType="Self.laptop" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
@@ -41,6 +51,15 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="laptopsModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Comment1" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LaptopId" Type="Int32" Nullable="false" />
+        </EntityType>
         <EntityType Name="laptop">
           <Key>
             <PropertyRef Name="Id" />
@@ -68,7 +87,8 @@
           <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="laptopsEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="laptopsEntities3" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Comments" EntityType="Self.Comment" />
           <EntitySet Name="laptops" EntityType="Self.laptop" />
           <EntitySet Name="Users" EntityType="Self.User" />
         </EntityContainer>
@@ -77,7 +97,17 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="laptopsModelStoreContainer" CdmEntityContainer="laptopsEntities">
+        <EntityContainerMapping StorageEntityContainer="laptopsModelStoreContainer" CdmEntityContainer="laptopsEntities3">
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="laptopsModel.Comment">
+              <MappingFragment StoreEntitySet="Comment">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Comment1" ColumnName="Comment" />
+                <ScalarProperty Name="LaptopId" ColumnName="LaptopId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="laptops">
             <EntityTypeMapping TypeName="laptopsModel.laptop">
               <MappingFragment StoreEntitySet="laptop">

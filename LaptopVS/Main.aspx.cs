@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Data;
 using LaptopVS.Laptop;
+using LaptopVS.Comments;
 
 namespace LaptopVS
 {
@@ -17,7 +18,7 @@ namespace LaptopVS
         {
             if (!Page.IsPostBack)
             {
-                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='D:\KULIAH\Semester 4\Software Engineering\LaptopVS\LaptopVS\App_Data\laptops.mdf';Integrated Security=True;MultipleActiveResultSets=True;Connect Timeout=30;Application Name=EntityFramework");
+                SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\laptops.mdf';Integrated Security=True;MultipleActiveResultSets=True;Connect Timeout=30;Application Name=EntityFramework");
                 SqlCommand cmd = new SqlCommand("select * from laptop", con);
                 SqlDataAdapter sda = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -38,6 +39,13 @@ namespace LaptopVS
             if (cookie == null)
             {
                 LOGOUT.Visible = false;
+                AddNewLaptop.Visible = false;
+                SendComment1.Visible = false;
+                SendComment2.Visible = false;
+                CommentBox1.Text = "Login to make comments!";
+                CommentBox1.Enabled = false;
+                CommentBox2.Text = "Login to make comments!";
+                CommentBox2.Enabled = false;
             }
 
             Image1.Visible = false;
@@ -78,7 +86,6 @@ namespace LaptopVS
             Label20.Visible = false;
             screen2.Visible = false;
             afflink2.Visible = false;
-
         }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
@@ -88,7 +95,7 @@ namespace LaptopVS
 
         protected void compbutton_Click(object sender, EventArgs e)
         {
-            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='D:\KULIAH\Semester 4\Software Engineering\LaptopVS\LaptopVS\App_Data\laptops.mdf';Integrated Security=True;MultipleActiveResultSets=True;Connect Timeout=30;Application Name=EntityFramework");
+            SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='|DataDirectory|\laptops.mdf';Integrated Security=True;MultipleActiveResultSets=True;Connect Timeout=30;Application Name=EntityFramework");
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from laptop where Id = '" + LeftLaptopSelection.SelectedValue + "'", con);
             SqlDataReader dr = cmd.ExecuteReader();
@@ -203,6 +210,35 @@ namespace LaptopVS
             {
                 Image2.ImageUrl = "~/swift.jpg";
             }
+
+            HttpCookie cookie = new HttpCookie("ingfo");
+            cookie["left"] = LeftLaptopSelection.SelectedValue;
+            cookie["right"] = LaptopRightSelection.SelectedValue;
+
+            Comment1.DataSource = CommentRepository.GetComments();
+            Comment1.DataBind();
+
+            foreach (GridViewRow myrow in Comment1.Rows)
+            {
+                myrow.Visible = false;
+                if (myrow.Cells[3].Text == cookie["left"])
+                {
+                    myrow.Visible = true;
+                }
+            }
+
+            Comment2.DataSource = CommentRepository.GetComments();
+            Comment2.DataBind();
+
+            foreach (GridViewRow myrow in Comment2.Rows)
+            {
+                myrow.Visible = false;
+                if (myrow.Cells[3].Text == cookie["right"])
+                {
+                    myrow.Visible = true;
+                }
+            }
+
         }
 
         protected void LOGOUT_Click(object sender, ImageClickEventArgs e)
@@ -225,6 +261,24 @@ namespace LaptopVS
                     Response.Redirect("AddNewLaptop.aspx");
                 }
             }
+            Response.Redirect("Main.aspx");
+        }
+
+        protected void SendComment1_Click(object sender, EventArgs e)
+        {
+            HttpCookie cookie = Request.Cookies["ingfo"];
+            string usern = cookie["user"].ToString();
+            int laptopid = int.Parse(LeftLaptopSelection.SelectedValue);
+            CommentController.addNewComment(laptopid, usern, CommentBox1.Text);
+            Response.Redirect("Main.aspx");
+        }
+
+        protected void SendComment2_Click(object sender, EventArgs e)
+        {
+            HttpCookie cookie = Request.Cookies["ingfo"];
+            string usern = cookie["user"].ToString();
+            int laptopid = int.Parse(LaptopRightSelection.SelectedValue);
+            CommentController.addNewComment(laptopid, usern.ToString(), CommentBox2.Text);
             Response.Redirect("Main.aspx");
         }
     }

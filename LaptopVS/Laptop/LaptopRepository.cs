@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using LaptopVS.Model;
 
 namespace LaptopVS.Laptop
 {
@@ -11,7 +12,7 @@ namespace LaptopVS.Laptop
             string gpuperf, string ram, string storage, string temp, string price, string noise, 
             string res, string afflink)
         {
-            laptopsEntities laptopdb = new laptopsEntities();
+            laptopsEntities3 laptopdb = new laptopsEntities3();
             laptop laptop = LaptopFactory.makeLaptop(name, cpuname, cpuperf, gpuname,
              gpuperf, ram, storage, temp, price, noise, res, afflink);
             laptopdb.laptops.Add(laptop);
@@ -22,7 +23,7 @@ namespace LaptopVS.Laptop
 
         public static List<laptop> getLaptop()
         {
-            laptopsEntities laptopdb = new laptopsEntities();
+            laptopsEntities3 laptopdb = new laptopsEntities3();
             List<laptop> laptops = (from x in laptopdb.laptops select x).ToList<laptop>();
             List<laptop> laptopnames = (from x in laptops select x).ToList<laptop>();
 
