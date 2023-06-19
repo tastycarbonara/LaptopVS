@@ -19,7 +19,7 @@ namespace LaptopVS
         {
             LaptopController.addlaptop(laptopname.Text, cpuname.Text, cpuperf.Text, gpuname.Text, 
                 gpuperf.Text, ramsize.Text, storagesize.Text, avgtemp.Text, pricetag.Text, noise.Text,
-                screenres.Text, linktotokped.Text);
+                screenres.Text, linktotokped.Text, int.Parse(battery.Text), features.Text, imagelink.Text);
             Response.Redirect("Main.aspx");
         }
     }

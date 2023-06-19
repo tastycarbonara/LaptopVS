@@ -27,5 +27,8 @@ namespace LaptopVS.Model
         public int sound { get; set; }
         public string screen { get; set; }
         public string afflink { get; set; }
+        public Nullable<int> battery { get; set; }
+        public string features { get; set; }
+        public string imageLink { get; set; }
     }
 }

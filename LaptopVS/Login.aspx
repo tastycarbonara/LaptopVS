@@ -8,8 +8,10 @@
 </head>
 <body style="font-family:Corbel; background-color: #e8e6e6;">
     <form id="form1" runat="server">
+        
         <div style="position: absolute; top: 50%; left: 50%;  transform: translate(-50%, -50%); 
         background-color: white; border-radius: 5%; padding: 1%; border: 1px solid #b5b5b5 ; padding-bottom: 45px;">
+            <asp:Image ID="Image3" runat="server" ImageUrl="~/Logo2.png" width="280px" />
             <h1>Login</h1>
             <asp:Label ID="Label1" runat="server" Text="Username:" style="display: inline-block; font-size: 20px; width: 120px;"></asp:Label>
             <asp:TextBox ID="usern" runat="server"></asp:TextBox><br />

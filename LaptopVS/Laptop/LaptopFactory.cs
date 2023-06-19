@@ -9,7 +9,8 @@ namespace LaptopVS.Laptop
     public class LaptopFactory
     {
         public static laptop makeLaptop(string name, string cpuname, string cpuperf, string gpuname,
-            string gpuperf, string ram, string storage, string temp, string price, string noise, string res, string afflink)
+            string gpuperf, string ram, string storage, string temp, string price, string noise, string res, string afflink,
+            int battery, string features, string imageurl)
         {
             laptop laptop = new laptop();
             laptop.laptopname = name;
@@ -24,6 +25,9 @@ namespace LaptopVS.Laptop
             laptop.sound = int.Parse(noise);
             laptop.screen = res;
             laptop.afflink = afflink;
+            laptop.battery = battery;
+            laptop.features = features;
+            laptop.imageLink = imageurl;
 
             return laptop;
         }

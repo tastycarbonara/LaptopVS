@@ -9,18 +9,17 @@
 <body style="font-family:Corbel;">
     <form id="form1" runat="server">
         <div style="text-align: center; display: flex; position: sticky; height: 70px;  ">
-            <p style="font-size: 50px; font-weight: bold; font-size: 50px;
-                margin-top: -8px; margin-left: 42%; margin-right: auto;">LaptopVS</p>
+            <asp:Image ID="Image3" runat="server" ImageUrl="~/Logo2.png" style="margin-left:40%;" />
             <asp:Button ID="AddNewLaptop" runat="server" Text="Add New Laptop" 
-                OnClick="AddNewLaptop_Click" width="130px" Height="50px"/>
+                OnClick="AddNewLaptop_Click" width="130px" Height="50px" style="margin-left:20%"/>
             <asp:ImageButton ID="LOGOUT" runat="server" ImageUrl="~/logout.png" OnClick="LOGOUT_Click"
-                width="50px" Height="50px"/>
+                width="50px" Height="50px" />
             <asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/person-4.png" OnClick="ImageButton1_Click" 
                 width="50px" Height="50px"  />
         </div>
         
-        <div style="margin-top: 5%; font-family: Bahnschrift;">
-            <div style="float: left; padding-left: 3%; font-size: 20px;">
+        <div style="margin-top: 5%; font-family: Bahnschrift; display:table;width:100%;">
+            <div style="float: left; padding-left: 3%; font-size: 20px; display:table-cell;">
                 <asp:Image ID="Image1" runat="server" ImageUrl=" " width="400px" Height="300px"/><br />
                 <asp:DropDownList ID="LeftLaptopSelection" runat="server" style="width: 300px; height: 50px; font-size: 25px;">
                 </asp:DropDownList><br />
@@ -62,8 +61,18 @@
                 <asp:Label ID="screen" runat="server" Text="Screen Resolution: "></asp:Label>
                 <asp:Label ID="screenres" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
 
+                <asp:Label ID="battery" runat="server" Text="Battery Life: "></asp:Label>
+                <asp:Label ID="batterylife" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label21" runat="server" Text=" hours"></asp:Label><br />
+
+                <asp:Label ID="feature" runat="server" Text="Features: "></asp:Label>
+                <asp:Label ID="features" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
+
                 <asp:Label ID="afflink" runat="server" Text="Shop Link: "></asp:Label>
                 <asp:Label ID="afflinktokped" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
+                
+                
+                
                 <br />
                 <h2>Comments</h2>
                 <asp:GridView ID="Comment1" runat="server"  BorderStyle="None" ></asp:GridView>
@@ -72,12 +81,18 @@
 
             </div>
             
-            <asp:Button ID="compbutton" runat="server" Text="COMPARE" style="font-size: 40px; 
-                padding: 20px; position: absolute; left: 50%; margin-top:50px; border-radius: 5px;
-                transform: translate(-50%, -50%); background-color: #555555; color: white;" 
+            <div style="display:table-cell;">
+                <asp:Button ID="compbutton" runat="server" Text="COMPARE" style="font-size: 40px; 
+                padding: 20px; transform: translate(10%, -550%); border-radius: 5px;
+                 background-color: #555555; color: white;" 
                 OnClick="compbutton_Click"/>
+                <div style="border:1px solid; transform: translateY(-150%); height: 300px">
+                    <h2>Ad Space</h2> 
+                </div>
+                
+            </div>
 
-            <div style="float: right;padding-right:3%;font-size: 20px;">
+            <div style="float: right;padding-right:3%;font-size: 20px; display:table-cell;">
                 <asp:Image ID="Image2" runat="server" ImageUrl=" " width="400px" Height="300px"/><br />
                 <asp:DropDownList ID="LaptopRightSelection" runat="server" style="width: 300px; height: 50px; font-size: 25px;">
                 </asp:DropDownList><br />
@@ -118,6 +133,13 @@
 
                 <asp:Label ID="screen2" runat="server" Text="Screen Resolution: "></asp:Label>
                 <asp:Label ID="screenres2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
+
+                <asp:Label ID="battery2" runat="server" Text="Battery Life: "></asp:Label>
+                <asp:Label ID="batterylife2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label>
+                <asp:Label ID="Label22" runat="server" Text=" hours"></asp:Label><br />
+
+                <asp:Label ID="feature2" runat="server" Text="Features: "></asp:Label>
+                <asp:Label ID="features2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />
 
                 <asp:Label ID="afflink2" runat="server" Text="Shop Link: "></asp:Label>
                 <asp:Label ID="afflinktokped2" runat="server" Text="" style="font-weight: bold; font-size: 25px;"></asp:Label><br />

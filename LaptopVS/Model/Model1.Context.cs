@@ -13,10 +13,10 @@ namespace LaptopVS.Model
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class laptopsEntities3 : DbContext
+    public partial class laptopsEntities4 : DbContext
     {
-        public laptopsEntities3()
-            : base("name=laptopsEntities3")
+        public laptopsEntities4()
+            : base("name=laptopsEntities4")
         {
         }
     

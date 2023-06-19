@@ -86,6 +86,12 @@ namespace LaptopVS
             Label20.Visible = false;
             screen2.Visible = false;
             afflink2.Visible = false;
+            battery.Visible = false;
+            feature.Visible = false;
+            battery2.Visible = false;
+            feature2.Visible = false;
+            Label21.Visible = false;
+            Label22.Visible = false;
         }
 
         protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
@@ -110,6 +116,9 @@ namespace LaptopVS
             priceusd.Text = dr["price"].ToString();
             sounddb.Text = dr["sound"].ToString();
             screenres.Text = dr["screen"].ToString();
+            batterylife.Text = dr["battery"].ToString();
+            features.Text = dr["features"].ToString();
+            Image1.ImageUrl = dr["imageLink"].ToString();
             afflinktokped.Text = dr["afflink"].ToString();
             con.Close();
 
@@ -127,7 +136,10 @@ namespace LaptopVS
             priceusd2.Text = dr2["price"].ToString();
             sounddb2.Text = dr2["sound"].ToString();
             screenres2.Text = dr2["screen"].ToString();
+            batterylife2.Text = dr2["battery"].ToString();
+            features2.Text = dr2["features"].ToString();
             afflinktokped2.Text = dr2["afflink"].ToString();
+            Image2.ImageUrl = dr2["imageLink"].ToString();
             con.Close();
 
             Image1.Visible = true;
@@ -149,6 +161,8 @@ namespace LaptopVS
             sound.Visible = true;
             Label10.Visible = true;
             screen.Visible = true;
+            battery.Visible = true;
+            feature.Visible = true;
             afflink.Visible = true;
 
             Label11.Visible = true;
@@ -167,49 +181,12 @@ namespace LaptopVS
             sound2.Visible = true;
             Label20.Visible = true;
             screen2.Visible = true;
+            battery2.Visible = true;
+            feature2.Visible = true;
             afflink2.Visible = true;
 
-            if (LeftLaptopSelection.SelectedValue == "2")
-            {
-                Image1.ImageUrl = "~/spectre.jpg";
-            }
-            else if(LeftLaptopSelection.SelectedValue == "3")
-            {
-                Image1.ImageUrl = "~/tuf.jpg";
-            }
-            else if(LeftLaptopSelection.SelectedValue == "4")
-            {
-                Image1.ImageUrl = "~/katana.png";
-            }
-            else if (LeftLaptopSelection.SelectedValue == "5")
-            {
-                Image1.ImageUrl = "~/pavilion.jpg";
-            }
-            else if (LeftLaptopSelection.SelectedValue == "6")
-            {
-                Image1.ImageUrl = "~/swift.jpg";
-            }
-
-            if (LaptopRightSelection.SelectedValue == "2")
-            {
-                Image2.ImageUrl = "~/spectre.jpg";
-            }
-            else if (LaptopRightSelection.SelectedValue == "3")
-            {
-                Image2.ImageUrl = "~/tuf.jpg";
-            }
-            else if (LaptopRightSelection.SelectedValue == "4")
-            {
-                Image2.ImageUrl = "~/katana.png";
-            }
-            else if (LaptopRightSelection.SelectedValue == "5")
-            {
-                Image2.ImageUrl = "~/pavilion.jpg";
-            }
-            else if (LaptopRightSelection.SelectedValue == "6")
-            {
-                Image2.ImageUrl = "~/swift.jpg";
-            }
+            Label21.Visible = true;
+            Label22.Visible = true;
 
             HttpCookie cookie = new HttpCookie("ingfo");
             cookie["left"] = LeftLaptopSelection.SelectedValue;

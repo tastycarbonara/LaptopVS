@@ -10,18 +10,19 @@ namespace LaptopVS.Laptop
     {
         public static string addlaptop(string name, string cpuname, string cpuperf, string gpuname,
             string gpuperf, string ram, string storage, string temp, string price, string noise,
-            string res, string afflink)
+            string res, string afflink, int battery, string features, string imageurl)
         {
-            if(name.Equals(" ") || cpuname.Equals(" ") || cpuperf.Equals(" ") || gpuname.Equals(" ") || 
-                gpuperf.Equals(" ") || ram.Equals(" ") || storage.Equals(" ") || temp.Equals(" ") || 
-                price.Equals(" ") || noise.Equals(" ") || res.Equals(" ") || afflink.Equals(" "))
+            if(name.Equals("") || cpuname.Equals("") || cpuperf.Equals("") || gpuname.Equals("") || 
+                gpuperf.Equals("") || ram.Equals("") || storage.Equals("") || temp.Equals("") || 
+                price.Equals("") || noise.Equals("") || res.Equals("") || afflink.Equals("")
+                || battery==0 || features.Equals("") || imageurl.Equals(""))
             {
                 return "Please fill all the fields";
             }
             else
             {
                 return LaptopRepository.AddNewLaptop( name,  cpuname,  cpuperf,  gpuname,
-                    gpuperf,  ram,  storage,  temp,  price,  noise, res,  afflink);
+                    gpuperf,  ram,  storage,  temp,  price,  noise, res,  afflink,  battery, features, imageurl);
             }
         }
     }

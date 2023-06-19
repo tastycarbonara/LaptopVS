@@ -31,6 +31,9 @@
           <Property Name="sound" Type="int" Nullable="false" />
           <Property Name="screen" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="afflink" Type="varchar(max)" Nullable="false" />
+          <Property Name="battery" Type="int" />
+          <Property Name="features" Type="varchar(max)" />
+          <Property Name="imageLink" Type="varchar(max)" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -77,6 +80,9 @@
           <Property Name="sound" Type="Int32" Nullable="false" />
           <Property Name="screen" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="afflink" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="battery" Type="Int32" />
+          <Property Name="features" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="imageLink" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -87,7 +93,7 @@
           <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityContainer Name="laptopsEntities3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="laptopsEntities4" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Comments" EntityType="Self.Comment" />
           <EntitySet Name="laptops" EntityType="Self.laptop" />
           <EntitySet Name="Users" EntityType="Self.User" />
@@ -97,7 +103,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="laptopsModelStoreContainer" CdmEntityContainer="laptopsEntities3">
+        <EntityContainerMapping StorageEntityContainer="laptopsModelStoreContainer" CdmEntityContainer="laptopsEntities4">
           <EntitySetMapping Name="Comments">
             <EntityTypeMapping TypeName="laptopsModel.Comment">
               <MappingFragment StoreEntitySet="Comment">
@@ -124,6 +130,9 @@
                 <ScalarProperty Name="sound" ColumnName="sound" />
                 <ScalarProperty Name="screen" ColumnName="screen" />
                 <ScalarProperty Name="afflink" ColumnName="afflink" />
+                <ScalarProperty Name="battery" ColumnName="battery" />
+                <ScalarProperty Name="features" ColumnName="features" />
+                <ScalarProperty Name="imageLink" ColumnName="imageLink" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -46,6 +46,15 @@
             <asp:Label ID="Label10" runat="server" Text="Screen Resolution:" style="display: inline-block; font-size: 20px; width: 200px;"></asp:Label>
             <asp:TextBox ID="screenres" runat="server"></asp:TextBox><br />
 
+            <asp:Label ID="Label13" runat="server" Text="Battery Life:" style="display: inline-block; font-size: 20px; width: 200px;"></asp:Label>
+            <asp:TextBox ID="battery" runat="server"></asp:TextBox><br />
+
+            <asp:Label ID="Label14" runat="server" Text="Features:" style="display: inline-block; font-size: 20px; width: 200px;"></asp:Label>
+            <asp:TextBox ID="features" runat="server"></asp:TextBox><br />
+
+            <asp:Label ID="Label15" runat="server" Text="Image Link:" style="display: inline-block; font-size: 20px; width: 200px;"></asp:Label>
+            <asp:TextBox ID="imagelink" runat="server"></asp:TextBox><br />
+
             <asp:Label ID="Label11" runat="server" Text="Link to shop:" style="display: inline-block; font-size: 20px; width: 200px;"></asp:Label>
             <asp:TextBox ID="linktotokped" runat="server"></asp:TextBox><br /><br /><br />
 

@@ -10,7 +10,7 @@ namespace LaptopVS.Comments
     {
         public static string AddNewComment(int laptopid, string username, string comment)
         {
-            laptopsEntities3 db = new laptopsEntities3();
+            laptopsEntities4 db = new laptopsEntities4();
             Comment com = CommentFactory.newComment(laptopid, username, comment);
             db.Comments.Add(com);
             db.SaveChanges();
@@ -19,7 +19,7 @@ namespace LaptopVS.Comments
         }
         public static List<Comment> GetComments()
         {
-            laptopsEntities3 db = new laptopsEntities3();
+            laptopsEntities4 db = new laptopsEntities4();
             return db.Comments.ToList();
         }
     }

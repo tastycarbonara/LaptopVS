@@ -17,7 +17,7 @@ namespace LaptopVS
 
         protected void LoginButton_Click(object sender, EventArgs e)
         {
-            laptopsEntities3 db = new laptopsEntities3();
+            laptopsEntities4 db = new laptopsEntities4();
 
             User user = (from u in db.Users where u.username.Equals(usern.Text) && u.password.Equals(pw.Text) select u).FirstOrDefault(); //FirstOrDefault = untuk memilih hasil pencarian pertama
 

@@ -10,7 +10,7 @@ namespace LaptopVS.UserSettings
     {
         public static string AddNewUser(string username, string password)
         {
-            laptopsEntities3 userdb = new laptopsEntities3();
+            laptopsEntities4 userdb = new laptopsEntities4();
             User user = UserFactory.makeUser(username, password);
             userdb.Users.Add(user);
             userdb.SaveChanges();
